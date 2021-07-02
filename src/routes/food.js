@@ -30,6 +30,8 @@ async function createFood(req, res, next) {
     next(e);
   }
 }
+
+
 async function updateFood(req, res, next) {
   try {
     const id = req.params.id;
@@ -40,6 +42,10 @@ async function updateFood(req, res, next) {
     next(e);
   }
 }
+
+
+
+
 async function deleteFood(req, res, next) {
   try {
     const id = req.params.id;
