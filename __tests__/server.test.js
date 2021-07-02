@@ -65,7 +65,7 @@ describe('Food path', () => {
 
   // })
 
-  it("Respond with 200", function (done) {
+  it("update", function (done) {
     let updates = "{ name: 'test', type: 'test' }"
 
     req.put('/')
@@ -92,10 +92,10 @@ describe('clothes path', () => {
 
 
   it('can get a clothes after creation', async () => {
-    let personObj = { name: 'test', color: 'test' };
+    let clothesObj = { name: 'test', color: 'test' };
     const res = await req.get('/api/v1/clothes');
-    expect(res.body.gettingClothes[0].name).toBe(personObj.name);
-    expect(res.body.gettingClothes[0].color).toBe(personObj.color);
+    expect(res.body.gettingClothes[0].name).toBe(clothesObj.name);
+    expect(res.body.gettingClothes[0].color).toBe(clothesObj.color);
     expect(res.body.gettingClothes.length).toBe(1);
     id = res.body.gettingClothes[0]._id;
 
@@ -123,7 +123,7 @@ describe('clothes path', () => {
 
   // })
 
-  it("Respond with 200", function (done) {
+  it("update", function (done) {
     let updates = "{ name: 'test', color: 'test' }"
 
     req.put('/')
